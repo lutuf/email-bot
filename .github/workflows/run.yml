@@ -1,0 +1,10 @@
+name: Android Bot Runner
+on: [push, workflow_dispatch]
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Bot
+        run: python bot.py
